@@ -15,7 +15,12 @@ Práticas para evitar block e aparecimento de recaptcha ao realizar scraping:
 - Rotação de IPs:
 
   Os proxies atuam como intermediários entre o solicitante e o servidor.Quando acessamos muitas vezes pelo mesmo IP o site detecta a automatização, já que o envio de muitas requests de um único endereço IP é uma indicação clara de que você está automatizando.
-  Na pasta "Rotação de ips" fiz um programa que simula o uso da rotação, mas como os IPs em sua maioria falham, (são free proxies), ficou só como prática. Existem serviços pagos que oferencem servidores proxies para fazer isso. 
+
+Na pasta "Rotação de ips" fiz um programa que simula o uso da rotação, mas como os IPs em sua maioria falham, (são free proxies), ficou só como prática. Existem serviços pagos que oferencem servidores proxies para fazer isso. 
+
+Foram utilizadas as bibliotecas asyncio e aiohttp para fazer a rotação de forma assíncrona. O uso dessas bibliotecas permite que o código faça requisições HTTP assíncronas para verificar os proxies fornecidos. 
+
+Ao usar programação assíncrona, é possível enviar várias solicitações de scraping para as páginas simultaneamente e processar as respostas à medida que elas chegam, em vez de esperar por cada resposta antes de enviar a próxima solicitação.
   
 - Rotação de user agents:
 
@@ -29,5 +34,12 @@ Práticas para evitar block e aparecimento de recaptcha ao realizar scraping:
 
 - Usar tempos mais parecidos com o que um humano levaria. Fazer uso de esperas com tempos diferentes, rolagem mais lenta etc.Exemplos de uso abaixo:
        time.sleep() 
-       WebDriverWait() 
+       WebDriverWait()
+
+
+
+Conforme sugerido foi utilizado ThreadPoolExecutor:
+
+Ao usar threads, o código pode executar a função "extrair_dados" em paralelo para cada elemento de "linhas". Isso pode melhorar o desempenho, especialmente quando há um grande número de elementos a serem processados.
+
 Sobre o arquivo requirements.txt, é possível ver que existem bibliotecas que não usei no código postado, mas durante meu aprendizado e tentativas de usa-las, acabei instalando no kernel que usei para desenvolver o projeto. Mesmo se não presentes no código, são usadas em web-scraping.
