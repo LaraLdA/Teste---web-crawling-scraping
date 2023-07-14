@@ -31,4 +31,4 @@ Práticas para evitar block e aparecimento de recaptcha ao realizar scraping:
   
        time.sleep() 
        WebDriverWait() 
-
+Sobre o arquivo requirements.txt, é possível ver que existem bibliotecas que não usei no código postado, mas durante meu aprendizado e tentativas de usa-las, acabei instalando no kernel que usei para desenvolver o projeto. Mesmo se não presentes no código, são usadas em web-scraping.
