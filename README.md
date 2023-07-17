@@ -6,7 +6,7 @@ Teste proposto:
 - Save a lista de proxies em um arquivo com nome proxies.json.
 - Imprima a quantidade de proxies capturados e o tempo de execução.
 #### Sobre o projeto e embasamento teórico
-O programa foi desenvolvido no jupyeter notebook. 
+O programa foi desenvolvido no jupyter notebook. 
 Foi utilizada uma VPN para alterar meu IP para evitar o bloqueio e o recaptcha foi resolvido manualmente. 
 
 O ideal é evitar que os captchas/recaptchas apareçam e para isso existem práticas que ajudam. Seguem algumas abaixo.
@@ -33,6 +33,7 @@ Ao usar programação assíncrona, é possível enviar várias solicitações de
         useAutomationExtension :A extensão de automação do usuário é uma extensão do Google Chrome que é carregada automaticamente quando o navegador é controlado por meio de automação, como o Selenium WebDriver. Essa extensão pode ser responsável por alterar o comportamento padrão do navegador em relação à automação, o que pode resultar em detecção e bloqueio por parte de sites ou aplicativos.
 
 - Usar tempos mais parecidos com o que um humano levaria. Fazer uso de esperas com tempos diferentes, rolagem mais lenta etc.Exemplos de uso abaixo:
+  
        time.sleep() 
        WebDriverWait()
 
